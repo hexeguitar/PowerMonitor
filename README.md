@@ -1,4 +1,4 @@
-POWER MONITOR
+##POWER MONITOR
 =============
 
 INA219 + PIC24F16KA101 DC voltage, current and power measurement module.
@@ -19,8 +19,7 @@ The device automatically detects if the power jacks are reversed (power applied 
 and kindly asks you to 
 
 
-========================================================================================
-Specs:
+#Specs:
 - maximum input/bus voltage: 26V DC (INA219B max rating)
 - voltage measurement resolution: 10mV 
 - measured current range: 0 - 1A (can be changed, refer to the INA219 datasheet)
@@ -29,21 +28,24 @@ Specs:
 - low dropout reverse supply polarity included
 - DC in, DC out jacks: 5.5/2.1mm, center negative
 - optional INA219 recalibration mode via UART
-========================================================================================
-Data outputs:
+
+
+#Data outputs:
 - SSD1206 OLED display (software I2C)
 - PCD8544 LCD (SPI)
 - UART (9600 baud)
-========================================================================================
-Extras:
+
+
+#Extras:
 - hardware I2C pin header
 - software I2C pin header (used to driver the OLED display)
 - hardware SPI pin header (used to drive the PCD8544 LCD display)
 - hardware UART pin header
 - ICSP programming pin header
 - logic input RB1 
-========================================================================================
-UART (9600 baud 8b 1Sb NP) commands
+
+
+#UART (9600 baud 8b 1Sb NP) commands
 NORMAL MODE:
 
 - lcd     data output format, copy of the LCD display
@@ -61,7 +63,8 @@ NORMAL MODE:
 RECAL MODE:
 - xxxx.xx waits for the reference current value (xxxx.xx[mA] format)
 - exit    cancel the calibration and return to NORMAL mode
-========================================================================================
+
+
   
 The PCB is designed as a small PIC24F16KA101 dev board and could be used to develop many new projects.
 I2C, SPI and UART pins are provided as pin headers for easy interfacing.
