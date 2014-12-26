@@ -47,23 +47,24 @@ and kindly asks you to
 ###UART (9600 baud 8b 1Sb NP) commands
 NORMAL MODE:
 
-- lcd     data output format, copy of the LCD display
-- raw     data output format, raw numbers separated by semicolons 
-- stop    stops updating the data via UART
-- start   start/resume the data update in 1 second intervals
-- rstcnt  resets the measurement counter to 0
-- getcnt  returns the actual masurement counter value
-- calrst  resets the INA219 calibration constant to theoretic calculated stock value (8192)
-- recal   INA219 secodary recalibration mode used to increase the precision. Requires a separate at least 4.5 digit mA/A meter as a reference
-- getcal  return the actual INA219 calibration constant value
-- y       yep! I confirm
-- n       no, thanks.
-
+'
+- **lcd**     data output format, copy of the LCD display
+- **raw**     data output format, raw numbers separated by semicolons 
+- **stop**    stops updating the data via UART
+- **start**   start/resume the data update in 1 second intervals
+- **rstcnt**  resets the measurement counter to 0
+- **getcnt**  returns the actual masurement counter value
+- **calrst**  resets the INA219 calibration constant to theoretic calculated stock value (8192)
+- **recal**   INA219 secodary recalibration mode used to increase the precision. Requires a separate at least 4.5 digit mA/A meter as a reference
+- **getcal**  return the actual INA219 calibration constant value
+- **y**       yep! I confirm
+- **n**       no, thanks.
+'
 RECAL MODE:
-- xxxx.xx waits for the reference current value (xxxx.xx[mA] format)
-- exit    cancel the calibration and return to NORMAL mode
-
-
+'
+- **xxxx.xx** waits for the reference current value (xxxx.xx[mA] format)
+- **exit**    cancel the calibration and return to NORMAL mode
+'
 
 The PCB is designed as a small PIC24F16KA101 dev board and could be used to develop many new projects.
 I2C, SPI and UART pins are provided as pin headers for easy interfacing.
